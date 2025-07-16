@@ -22,4 +22,4 @@ if __name__=='__main__':
     # 导出所有公司的放贷额度到 CSV
     output_file = 'lending_decision.csv'
     df_decision.to_csv(output_file, index=False, encoding='utf-8-sig')
-    print(f"已导出所有公司放贷额度到 {output_file}")
+    # print(f"已导出所有公司放贷额度到 {output_file}")
