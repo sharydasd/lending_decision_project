@@ -19,4 +19,7 @@ if __name__=='__main__':
     df_risk = compute_combined_risk(df_pred, data2, annual_credit=1e8)
     # 4. 放贷决策和利率
     df_decision = make_lending_decision(df_risk, total_credit=1e8)
-    print(df_decision.head())
+    # 导出所有公司的放贷额度到 CSV
+    output_file = 'lending_decision.csv'
+    df_decision.to_csv(output_file, index=False, encoding='utf-8-sig')
+    print(f"已导出所有公司放贷额度到 {output_file}")
