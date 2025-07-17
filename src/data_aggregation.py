@@ -5,10 +5,7 @@ def aggregate_transactions(path,
                             sheet_out='销项发票信息',
                             id_col='企业代号'):
     """
-    聚合发票信息，计算企业交易特征：
-      - inflow  进项价税合计总额
-      - outflow 销项价税合计总额
-      - net_flow 净流量（outflow - inflow）
+    聚合发票数据，生成 inflow、outflow、net_flow 三个特征
     """
     df_in = pd.read_excel(path, sheet_name=sheet_in)
     df_out = pd.read_excel(path, sheet_name=sheet_out)
